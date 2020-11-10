@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Kokokara - 購物車</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    
+    <!-- Vender  -->
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/icon-line-pro/style.css">
+    <link rel="stylesheet" type="text/css" href="vendor/icon-line/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <!-- Koko CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/module.css">
+    <link rel="stylesheet" type="text/css" href="css/component.css">
+    <link rel="stylesheet" type="text/css" href="css/themes.css">
+    <link rel="stylesheet" type="text/css" href="css/koko-cart.css">
+    <!--[if lte IE 9]>
+        <script src="vendor/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="vendor/respond/dest/respond.min.js"></script>
+        <script src="vendor/Placeholders.js-master/dist/placeholders.jquery.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <main>
+        <header id="headerCheck">
+            <!-- Header Start -->
+            <section class="koko-header">
+                <div class="container">
+                    <div class="koko-brand">
+                        <a href="index.html" class="not-pointer">
+                            <i class="koko-icon-img-logo logo--md" aria-hidden="true">
+                                <font class="path1"></font>
+                                <font class="path2"></font>
+                                <font class="path3"></font>
+                                <font class="path4"></font>
+                                <font class="path5"></font>
+                                <font class="path6"></font>
+                                <font class="path7"></font>
+                                <font class="path8"></font>
+                                <font class="path9"></font>
+                            </i>
+                        </a>
+                    </div>
+                    <a class="search-icon" href="javascript:;" id="searchInputIcon">
+                        <i class="icon-magnifier"></i>
+                    </a>
+                    <form class="site-search" method="get">
+                        <input class="search-input" type="text" placeholder="Search" autocomplete="off" id="searchInputBox1">
+                        <i class="icon-close" id="searchClose"></i>
+                    </form>
+                    <div class="koko-search hidden-sm-up">
+                        <div class="search-input-block" id="searchInput">
+                            <select class="selectWhite" id="categories">
+                                <option value="hide">商品分類</option>
+                                <option value="1">Categories</option>
+                            </select>
+                            <div class="search-input-cnt">
+                                <input class="search-input" type="text" placeholder="Search" autocomplete="off" id="searchInputBox">
+                                <ul class="search-log" id="searchLog">
+                                    <li><a href="javascript:;">富山123</a></li>
+                                    <li><a href="javascript:;">富山123</a></li>
+                                    <li><a href="javascript:;">富山123</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn--primary" type="button">
+                                <i class="icon-magnifier align-middle mr-4"></i>
+                                <span class="align-middle">SEARCH</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="koko-member hidden-sm-up">
+                        <ul class="member-main">
+                            <li>
+                                <a href="membercenter_contactUs.html">
+                                    <i class="icon-speech" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" id="basketShop">
+                                    <i class="icon-basket" aria-hidden="true"></i>
+                                </a>
+                                <span class="counter badge member-main-badge" id="countCart">0</span>
+                            </li>
+                            <div id="basketIn" class="shopping-cart-basket">
+                                <div class="shopping-cart-header">
+                                    <div class="shopping-cart-total">
+                                        <span class="text--black">總共：</span>
+                                        <span class="text--secondary">$0.00</span>
+                                    </div>
+                                    <div class="clear-fix"></div>
+                                </div>
+                                <div class="shopping-cart-items" id="rtCard">
+                                    <span id="rtempty" class="empty">還沒有購買商品喔！</span>
+                                </div>
+                                <a id="rtCheckBtn" href="cart_1_check.html" class="btn btn--block">立 即 結 帳</a>
+                            </div>
+                            <li>
+                                <a href="membercenter.html">
+                                    <i class="icon-people" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Header End -->
+            <!-- Main Nav Start-->
+            <nav class="koko-navbar hidden-sm-up">
+                <div class="container">
+                    <div class="row" style="">
+                        <div class="col-lg-12">
+                            <div class="cd-dropdown-wrapper">
+                                <a class="cd-dropdown-trigger" href="javascript:;">
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                    <span>商品目錄</span>
+                                </a>
+                                <nav class="cd-dropdown">
+                                    <h2>
+                                        <a href="javascript:;" class="logo">
+                                            <img src="img/img-logo-white.svg" alt="kokokara">
+                                        </a>
+                                        <a href="signInUp.html" class="login-link text--underline">登入 / 註冊</a>
+                                    </h2>
+                                    <a href="javascript:;" class="cd-close">Close</a>
+                                    <ul class="cd-dropdown-content">
+                                        <li class="hidden-sm-up">
+                                            <a href="javascript:;">
+                                                <i class="icon-real-estate-043"></i>
+                                                <span>首頁</span>
+                                            </a>
+                                        </li>
+                                        <li class="cd-divider hidden-sm-up">商品分類</li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-hotel-restaurant-106"></i>
+                                                <span>美容</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">Menu</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                                <div class="clear-fix"></div>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-science-085"></i>
+                                                <span>彩妝</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">返回卸妝</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-medical-002"></i>
+                                                <span>生活保健</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">Menu</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                                <div class="clear-fix"></div>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-medical-001"></i>
+                                                <span>醫藥品</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">返回卸妝</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-science-134"></i>
+                                                <span>孕嬰用品</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">返回卸妝</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:;">所有商品分類頁面</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Main Nav End -->
+        </header>
+        <section class="koko-product-list">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-8 col-sm-12">
+                        <ul class="step-line cf">
+                            <li class="active">
+                                <div class="step-icons">
+                                    <span>1</span>
+                                </div>
+                                <a href="javascript:;" class="step-txt">填寫配送與結帳資訊</a>
+                            </li>
+                            <li>
+                                <div class="step-icons">
+                                    <span>2</span>
+                                </div>
+                                <p class="step-txt">確認訂單內容</p>
+                            </li>
+                            <li>
+                                <div class="step-icons">
+                                    <span>3</span>
+                                </div>
+                                <p class="step-txt">填寫付款資料</p>
+                            </li>
+                        </ul>
+                        <div class="shopping-cart">
+                            <div class="koko-heading accordion_cart pointer">
+                                <h2 class="koko-title--1">
+                                    <i class="fa fa-minus" aria-expanded="false"></i>
+                                    購買商品明細 (2)
+                                </h2>
+                                <h4 class="koko-coupon-cnt">持有點數: 300 點 / 貨幣轉換: 相當於 300 日圓</h4>
+                            </div>
+                            <div class="shopping-cart-cnt mt-24">
+                                <div class="product-row-labels cf recheck">
+                                    <label class="product-image pl-20 cf">商品圖片</label>
+                                    <label class="product-details pl-16 cf">商品名稱</label>
+                                    <label class="product-price tw">價錢</label>
+                                    <label class="product-quantity cf">數量</label>
+                                    <label class="product-line-price tw">小計</label>
+                                    <label class="product-weight">重量</label>
+                                </div>
+                                <ul class="product-row-list recheck">
+                                    <li class="product-row cf not-select">
+                                        <div class="product-image cf">
+                                            <img src="img/img-product.svg">
+                                        </div>
+                                        <div class="product-details">
+                                            <div class="product-title">
+                                                <a href="javascript:;">DHC 維生素C 膠囊 60天份 120粒</a>
+                                            </div>
+                                            <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+                                        </div>
+                                        <div class="product-price">
+                                            <font class="tw">1299</font>
+                                        </div>
+                                        <div class="product-quantity">
+                                            <font>1</font>
+                                        </div>
+                                        <div class="product-line-price">
+                                            <font class="tw">1299</font>
+                                        </div>
+                                        <div class="product-weight">550 kg</div>
+                                    </li>
+                                    <li class="product-row cf not-select">
+                                        <div class="product-image cf">
+                                            <img src="img/img-product.svg">
+                                        </div>
+                                        <div class="product-details">
+                                            <div class="product-title">
+                                                <a href="javascript:;">DHC 維生素C 膠囊 60天份 120粒</a>
+                                            </div>
+                                            <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+                                        </div>
+                                        <div class="product-price">
+                                            <font class="tw">1299</font>
+                                        </div>
+                                        <div class="product-quantity">
+                                            <font>1</font>
+                                        </div>
+                                        <div class="product-line-price">
+                                            <font class="tw">1299</font>
+                                        </div>
+                                        <div class="product-weight">550 kg</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form action="" method="" accept-charset="" class="koko-form">
+                            <div class="koko-heading">
+                                <h2 class="koko-title--1">收件人資料</h2>
+                            </div>
+                            <div class="receiver-cnt mt-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <input type="checkbox" value="1" class="checkbox-input" id="receiver">
+                                        <label class="receiver-card checkbox-label can" for="receiver">
+                                            <figure>
+                                                <figcaption>
+                                                    <font>收件人 (1)</font>
+                                                    <div class="btn-action">
+                                                        <button href="javascript:;" class="btn btn--border--primary btn--square">
+                                                            <i class="icon-hotel-restaurant-214"></i>
+                                                        </button>
+                                                        <button href="javascript:;" class="btn btn--primary btn--square">
+                                                            <i class="icon-pencil"></i>
+                                                        </button>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="receiver-card-cnt">
+                                                    <dl>
+                                                        <dt>姓　　名：</dt>
+                                                        <dd>王OO</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>國　　家：</dt>
+                                                        <dd>台灣</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>郵遞區號：</dt>
+                                                        <dd>110</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>地　　址：</dt>
+                                                        <dd>OO市OO區OO路OO號OO樓</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>電　　話：</dt>
+                                                        <dd>(+886) 900123123</dd>
+                                                    </dl>
+                                                </div>
+                                            </figure>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <input type="checkbox" value="2" class="checkbox-input" id="receiver2">
+                                        <label class="receiver-card checkbox-label editor" for="receiver2">
+                                            <figure>
+                                                <figcaption>
+                                                    <font>編輯收件人</font>
+                                                    <div class="btn-action">
+                                                        <a href="javascript:;" class="btn btn--border--primary btn--xs">
+                                                            取消
+                                                        </a>
+                                                        <a href="javascript:;" class="btn btn--primary btn--xs">
+                                                            儲存
+                                                        </a>
+                                                    </div>
+                                                </figcaption>
+                                                <div class="receiver-card-cnt">
+                                                    <div class="form-group">
+                                                        <label>姓　　名</label>
+                                                        <input type="text" name="" value="" placeholder="請輸入您的收件人姓名">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>國　　家</label>
+                                                        <select class="selectCountry">
+                                                            <option value="1" selected>台灣</option>
+                                                            <option value="2">大陸</option>
+                                                            <option value="4">美國</option>
+                                                            <option value="8">日本</option>
+                                                            <option value="16">韓國</option>
+                                                            <option value="32">越南</option>
+                                                        </select>
+                                                        <input type="text" name="" value="" placeholder="請輸入城市" class="inline-block input--sm ml-8">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>郵遞區號</label>
+                                                        <input type="text" name="" value="" placeholder="請輸入您的郵遞區號" maxlength="5">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>地　　址</label>
+                                                        <input type="text" name="" value="" placeholder="請輸入您的地址">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>電　　話</label>
+                                                        <select class="selectCountry">
+                                                            <option value="1" selected>台灣(+886)</option>
+                                                            <option value="2">大陸(+86)</option>
+                                                            <option value="4">美國(+1)</option>
+                                                            <option value="8">日本(+81)</option>
+                                                            <option value="16">韓國(+82)</option>
+                                                            <option value="32">越南(+84)</option>
+                                                        </select>
+                                                        <input type="text" name="" value="" placeholder="請輸入您的電話" class="inline-block input--md ml-8">
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </label>
+                                    </div>
+                                    <div class="clear-fix"></div><!-- 兩個 col-lg-6 之後添加一個清除浮動 -->
+                                    <!-- 收件人編輯時將新增區塊隱藏 -->
+                                    <div class="col-lg-6 col-md-12" id="adDeliveryBlcok">
+                                        <figure class="add-block">
+                                            <figcaption></figcaption>
+                                            <button class="btn btn--primary">
+                                                <i class="fa fa-plus mr-8" aria-hidden="true"></i>
+                                                <font>新增收件人</font>
+                                            </button>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="" method="" accept-charset="" class="koko-form">
+                            <div class="koko-heading">
+                                <h2 class="koko-title--1">選擇配送方式</h2>
+                            </div>
+                            <div class="delivery-cnt mt-24">
+                                <div class="delivery-labels cf">
+                                    <label class="delivery-no cf">
+                                    </label>
+                                    <label class="delivery-kind cf">
+                                        種類
+                                    </label>
+                                    <label class="delivery-weight cf">
+                                        重量限制
+                                    </label>
+                                    <label class="delivery-cost tw">
+                                        運費
+                                    </label>
+                                    <label class="delivery-compensation cf">
+                                        配送賠償 / 郵件號碼
+                                    </label>
+                                    <label class="delivery-day cf">
+                                        出貨後平均送達天數
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label class="control control--radio" for="delivery_1">
+                                        <ul class="delivery-item cf">
+                                            <li class="delivery-no">
+                                                <input type="radio" id="delivery_1" name="delivery">
+                                                <div class="control__indicator"></div>
+                                            </li>
+                                            <li class="delivery-kind">
+                                                <a href="javascript:;" class="link--primary">國際快捷郵件 (EMS)</a>
+                                            </li>
+                                            <li class="delivery-weight">
+                                                29000
+                                                <small>G</small>
+                                            </li>
+                                            <li class="delivery-cost tw">
+                                                1470
+                                                <small>TWD</small>
+                                            </li>
+                                            <li class="delivery-compensation text--secondary">
+                                                O / O
+                                            </li>
+                                            <li class="delivery-day">
+                                                2
+                                                <small>日</small>
+                                            </li>
+                                        </ul>
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label class="control control--radio" for="delivery_2">
+                                        <ul class="delivery-item cf">
+                                            <li class="delivery-no">
+                                                <input type="radio" id="delivery_2" name="delivery">
+                                                <div class="control__indicator"></div>
+                                            </li>
+                                            <li class="delivery-kind">
+                                                <a href="javascript:;" class="link--primary">國際快捷郵件 (EMS)</a>
+                                            </li>
+                                            <li class="delivery-weight">
+                                                29000
+                                                <small>G</small>
+                                            </li>
+                                            <li class="delivery-cost tw">
+                                                1470
+                                                <small>TWD</small>
+                                            </li>
+                                            <li class="delivery-compensation">
+                                                <font class="text--lightgrey">—</font>
+                                            </li>
+                                            <li class="delivery-day">2 <small>日</small></li>
+                                        </ul>
+                                    </label>
+                                </div>
+                                <div class="bt-btn-row">
+                                    <a href="javascript:;" class="btn btn--xs" data-tooltip="11212313">說明</a>
+                                    <a href="javascript:;" class="btn btn--border btn--xs">其他配送方式</a>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="" method="" accept-charset="" class="koko-form">
+                            <div class="koko-heading">
+                                <h2 class="koko-title--1">使用點數</h2>
+                                <p class="text--grey text--14 inline-block align-bottom ml-24">可使用的點數 300 Points / 使用點數 0 Points</p>
+                            </div>
+                            <div class="border-cnt mt-24">
+                                <p class="text--14 mb-8">若欲使用持有點數，請先選擇使用方式。</p>
+                                <label class="control control--radio mt-16">
+                                    <input type="radio">
+                                    <div class="control__indicator"></div>
+                                    <span>使用點數</span>
+                                    <input type="text" name="" class="align-middle input--sm mr-12 ml-12">
+                                    <span>Points</span>
+                                </label>
+                                <label class="control control--radio mt-16">
+                                    <input type="radio">
+                                    <div class="control__indicator"></div>
+                                    <span>使用全部點數</span>
+                                </label>
+                            </div>
+                        </form>
+                        <form action="" method="" accept-charset="" class="koko-form">
+                            <div class="koko-heading">
+                                <h2 class="koko-title--1">使用折價卷</h2>
+                            </div>
+                            <div class="border-cnt mt-24">
+                                <select name="coupon">
+                                    <option value="1">選擇持有的折價券</option>
+                                </select>
+                            </div>
+                        </form>
+                        <form action="koko-checkout_submit" method="get" accept-charset="utf-8" class="koko-form">
+                            <div class="koko-heading">
+                                <h2 class="koko-title--1">選擇付款方式</h2>
+                            </div>
+                            <div class="payment-cnt mt-24">
+                                <div class="payment-item">
+                                    <label class="control control--radio" for="payment_1">
+                                        <div class="payment-choose">
+                                            <input type="radio" name="payment" id="payment_1" value="1">
+                                            <div class="control__indicator"></div>
+                                        </div>
+                                        <div class="payment-kind">
+                                            <img src="img/payment_1.svg" alt="AFTEE">
+                                        </div>
+                                        <div class="payment-txt">
+                                            <h6>AFTEE</h6>
+                                            <p class="sub-title">說明：</p>
+                                            <p class="description">台灣超商／ATM繳費不取貨。</p>
+                                            <p class="remark">※ 訂單出貨後將由「中華郵政」安排配送，請在收到繳費簡訊通知後，於期限內前往四大超商或ATM繳費付款。</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-item">
+                                    <label class="control control--radio" for="payment_2">
+                                        <div class="payment-choose">
+                                            <input type="radio" name="payment" id="payment_2" value="2">
+                                            <div class="control__indicator"></div>
+                                        </div>
+                                        <div class="payment-kind">
+                                            <img src="img/payment_2.svg" alt="信用卡">
+                                        </div>
+                                        <div class="payment-txt">
+                                            <h6>信用卡</h6>
+                                            <p class="sub-title">說明：</p>
+                                            <p class="description">供持卡人個人驗證服務(3D驗證)。</p>
+                                            <p class="remark">※ 付款時網頁將自動切換至發卡機構的驗證頁面。</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-item">
+                                    <label class="control control--radio" for="payment_3">
+                                        <div class="payment-choose">
+                                            <input type="radio" name="payment" id="payment_3" value="4">
+                                            <div class="control__indicator"></div>
+                                        </div>
+                                        <div class="payment-kind">
+                                            <img src="img/payment_4.svg" alt="支付寶">
+                                        </div>
+                                        <div class="payment-txt">
+                                            <h6>支付寶</h6>
+                                            <p class="sub-title">說明：</p>
+                                            <p class="description">供持卡人個人驗證服務(3D驗證)。</p>
+                                            <p class="remark">※ 付款時網頁將自動切換至發卡機構的驗證頁面。</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-item">
+                                    <label class="control control--radio" for="payment_4">
+                                        <div class="payment-choose">
+                                            <input type="radio" name="payment" id="payment_4" value="8">
+                                            <div class="control__indicator"></div>
+                                        </div>
+                                        <div class="payment-kind">
+                                            <img src="img/payment_3.svg" alt="PayPal">
+                                        </div>
+                                        <div class="payment-txt">
+                                            <h6>PayPal</h6>
+                                            <p class="sub-title">說明：</p>
+                                            <p class="description">點選「填寫付款資料」後，網頁將自動切換至PayPal的付款頁面。多和夢商城已加入由PayPal制定之「賣家安全保障」條款，因此可能會有部分用戶無法使用PayPa付款服務，敬請見諒。</p>
+                                            <p class="remark">※ 無需通過3D驗證</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="check-btn-row mb-0">
+                            <a href="cart_1_check.html" class="btn btn--primary btn--md">回 到 購 物 車</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="totals-block cf" id="s1_checkRtBox">
+                            <h2>結帳資訊</h2>
+                            <div class="totals-item">
+                                <label class="text--grey--1">商品數量</label>
+                                <div class="totals-value-sub" id="cart-subtotal">3 件</div>
+                            </div>
+                            <div class="totals-item">
+                                <label class="text--grey--1">總重量</label>
+                                <div class="totals-value-sub" id="cart-tax">821 g</div>
+                            </div>
+                            <div class="totals-item">
+                                <label class="text--grey--1">商品金額 (免稅)</label>
+                                <div class="totals-value-sub text--secondary" id="cart-shipping">
+                                    <strong class="text--24 tw">2,506</strong> TWD
+                                </div>
+                            </div>
+                            <a href="cart_3_agcheckout.html" class="btn btn--lg btn--block">前 往 確 認 訂 單</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <footer class="koko-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <h2>
+                            <i class="icon-education-045"></i>
+                            <span>找商品</span>
+                        </h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="ft-list">
+                                    <li class="">
+                                        <a class="" href="javascript:;">分類搜尋</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">品牌搜尋</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="js/" href="javascript:;">製造商搜尋</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">最新熱門商品</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h2>
+                            <i class="icon-education-043"></i>
+                            <span>客戶服務中心</span>
+                        </h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="ft-list">
+                                    <li class="">
+                                        <a class="" href="javascript:;">使用導覽</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">常見問題</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">聯絡我們</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">未註冊會員訂單查詢</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h2>
+                            <i class="icon-real-estate-013"></i>
+                            <span>關於 KOKOKARA</span>
+                        </h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="ft-list">
+                                    <li class="">
+                                        <a class="" href="javascript:;">關於我們</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">服務條款</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">點數規範</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">折價卷使用條款</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">個人資料保護方針</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <img src="img/img-logo-white.svg" alt="kokokara">
+                        <ul class="social-icons">
+                            <li>
+                                <a href="javascript:;" data-tooltip="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="微博">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="ft-txt-block">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                            <p class="copyright">2019 © Kokokara. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="payment-icons">
+                            <li>
+                                <a href="javascript:;" data-tooltip="Visa" class="block">
+                                    <i class="fa fa-cc-visa"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Paypal" class="block">
+                                    <i class="fa fa-cc-paypal"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Mastercard" class="block">
+                                    <i class="fa fa-cc-mastercard"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Discover" class="block">
+                                    <i class="fa fa-cc-discover"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Jcb" class="block">
+                                    <i class="fa fa-cc-jcb"></i>
+                                </a>s
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <button class="js-go-to go-to-top" href="#" data-type="fixed" data-position='{"bottom": 16,"right": 16}' data-offset-top="400" data-compensation="#header" data-show-effect="zoomIn">
+            <i class="icon-arrow-up"></i>
+        </button>
+        <button class="js-go-to go-to-top" href="javascript:;" data-type="fixed" data-position='{"bottom": 16,"right": 16}' data-offset-top="400" data-compensation="#headerCheck" data-show-effect="zoomIn">
+            <i class="icon-arrow-up"></i>
+        </button>
+    </main>
+    <!-- JQuery -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Scroll -->
+    <script src="vendor/ScrollToFixed-master/jquery-scrolltofixed.js"></script>
+    <!-- OwlCarousel -->
+    <script src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- Mega Menu -->
+    <script src="vendor/mega-dropdown-master/js/jquery.menu-aim.js"></script>
+    <script src="vendor/mega-dropdown-master/js/mega-dropdown.js"></script>
+    <!-- FancyBox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- Go Top -->
+    <script src="js/go-to-top.js"></script>
+    <!-- Go Top -->
+    <script src="js/go-to-top.js"></script>
+    <!-- Main -->
+    <script src="js/main.min.js"></script>
+    <script>
+    $(".accordion_cart").click(function() {
+        kokokaraMain.acToggle(this);
+        kokokaraMain.accordion(this);
+    });
+    </script>
+</body>
+
+</html>

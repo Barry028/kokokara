@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <g id="payment_1" transform="translate(3766 -1798)">
+    <rect id="Rectangle_23995" data-name="Rectangle 23995" width="240" height="240" transform="translate(-3766 1798)" fill="#48d5c4"/>
+    <g id="レイヤー_2" data-name="レイヤー 2" transform="translate(-3738 1898)">
+      <g id="top1">
+        <path id="Path_775" data-name="Path 775" d="M55.183,19.551H40.216V12.779H57.027V7.64H34.5V35.869h5.716V24.69H55.183Z" transform="translate(14.074 3.117)" fill="#fff"/>
+        <path id="Path_776" data-name="Path 776" d="M84.391,7.64H59.33v5.223H69V35.869h5.716V12.863h9.673Z" transform="translate(24.203 3.117)" fill="#fff"/>
+        <path id="Path_777" data-name="Path 777" d="M108.126,24.155V19.143h-14.8V12.652H109.97V7.64H87.64V35.869h22.541V30.857H93.328v-6.7Z" transform="translate(35.752 3.117)" fill="#fff"/>
+        <path id="Path_778" data-name="Path 778" d="M134.971,24.155V19.143h-14.8V12.652h16.642V7.64H114.5V35.869h22.527V30.857H120.174v-6.7Z" transform="translate(46.709 3.117)" fill="#fff"/>
+        <path id="Path_779" data-name="Path 779" d="M27.014,36.2h6.223L19.157,8.313a2.816,2.816,0,0,0-1.014-1.07,2.731,2.731,0,0,0-2.816,0,2.816,2.816,0,0,0-1.014,1.084L.15,36.2H6.373l10.32-20.7Z" transform="translate(0.061 2.795)" fill="#fff"/>
+        <rect id="Rectangle_23994" data-name="Rectangle 23994" width="33.509" height="4.365" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

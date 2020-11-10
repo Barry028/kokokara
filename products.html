@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Kokokara - 商品名稱</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    
+    <!-- Vender  -->
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/icon-line-pro/style.css">
+    <link rel="stylesheet" type="text/css" href="vendor/icon-line/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.css">
+    <!-- Koko CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/module.css">
+    <link rel="stylesheet" type="text/css" href="css/component.css">
+    <link rel="stylesheet" type="text/css" href="css/themes.css">
+    <!--[if lte IE 9]>
+        <script src="vendor/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="vendor/respond/dest/respond.min.js"></script>
+        <script src="vendor/Placeholders.js-master/dist/placeholders.jquery.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <main>
+        <section class="koko-top-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span class="align-middle">RUSH SALE 01.06 23:59 (日本時間) 截止！</span>
+                        <a class="btn btn--tertiary btn--xs" href="javascript:;">SALE商品請點這裡</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <header id="header">
+            <!-- Top Nav Start -->
+            <nav class="koko-top-nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="push-left hidden-sm">
+                                <i class="icon-clock align-middle"></i>
+                                <font class="align-middle">Mon - Sun: 8:00 am to 5:00 pm</font>
+                            </div>
+                            <div class="push-right">
+                                <select id="language">
+                                    <option value="1">中文 (繁體)</option>
+                                    <option value="2">中文 (簡體)</option>
+                                </select>
+                                <font>參和考幣別:</font>
+                                <select id="cost">
+                                    <option value="1">JPY</option>
+                                    <option value="2">TWD</option>
+                                </select>
+                                <font>收貨地:</font>
+                                <select id="area">
+                                    <option value="1">台灣</option>
+                                    <option value="2">大陸</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Top Nav End -->
+            <!-- Header Start -->
+            <section class="koko-header">
+                <div class="container">
+                    <div class="koko-brand">
+                        <a href="index.html">
+                            <i class="koko-icon-img-logo">
+                                <font class="path1"></font>
+                                <font class="path2"></font>
+                                <font class="path3"></font>
+                                <font class="path4"></font>
+                                <font class="path5"></font>
+                                <font class="path6"></font>
+                                <font class="path7"></font>
+                                <font class="path8"></font>
+                                <font class="path9"></font>
+                            </i>
+                        </a>
+                        </a>
+                    </div>
+                    <a class="search-icon" href="javascript:;" id="searchInputIcon">
+                        <i class="icon-magnifier"></i>
+                    </a>
+                    <form class="site-search" method="get">
+                        <input class="search-input" type="text" placeholder="Search" autocomplete="off" id="searchInputBox1">
+                        <i class="icon-close" id="searchClose"></i>
+                    </form>
+                    <div class="koko-search">
+                        <div class="search-input-block" id="searchInput">
+                            <select class="selectWhite" id="categories">
+                                <option value="hide">商品分類</option>
+                                <option value="1">Categories</option>
+                            </select>
+                            <div class="search-input-cnt">
+                                <input class="search-input" type="text" placeholder="Search" autocomplete="off" id="searchInputBox">
+                                <ul class="search-log" id="searchLog">
+                                    <li><a href="javascript:;">富山123</a></li>
+                                    <li><a href="javascript:;">富山123</a></li>
+                                    <li><a href="javascript:;">富山123</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn--primary" type="button">
+                                <i class="icon-magnifier align-middle mr-4"></i>
+                                <span class="align-middle">SEARCH</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="koko-member">
+                        <ul class="member-main">
+                            <li>
+                                <a href="membercenter_contactUs.html">
+                                    <i class="icon-speech" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" id="basketShop">
+                                    <i class="icon-basket" aria-hidden="true"></i>
+                                </a>
+                                <span class="counter badge member-main-badge" id="countCart">0</span>
+                            </li>
+                            <div id="basketIn" class="shopping-cart-basket">
+                                <div class="shopping-cart-header">
+                                    <h4>我的購物車</h4>
+                                    <div class="shopping-cart-total">
+                                        <span class="text--black">總共：</span>
+                                        <span class="text--secondary">$0.00</span>
+                                    </div>
+                                    <div class="clear-fix"></div>
+                                </div>
+                                <div class="shopping-cart-items" id="rtCard">
+                                    <span id="rtempty" class="empty">還沒有購買商品喔！</span>
+                                </div>
+                                <a id="rtCheckBtn" href="cart_1_check.html" class="btn btn--block">立 即 結 帳</a>
+                            </div>
+                            <li>
+                                <a href="membercenter.html">
+                                    <i class="icon-people" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Header End -->
+            <!-- Main Nav Start-->
+            <nav class="koko-navbar">
+                <div class="container">
+                    <div class="row" style="">
+                        <div class="col-lg-12">
+                            <!-- Product menu -->
+                            <div class="cd-dropdown-wrapper">
+                                <a class="cd-dropdown-trigger" href="javascript:;">
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                    <span>商品目錄</span>
+                                </a>
+                                <nav class="cd-dropdown">
+                                    <h2>
+                                        <a href="javascript:;" class="logo">
+                                            <img src="img/img-logo-white.svg" alt="kokokara">
+                                        </a>
+                                        <a href="signInUp.html" class="login-link text--underline">登入 / 註冊</a>
+                                    </h2>
+                                    <a href="javascript:;" class="cd-close">Close</a>
+                                    <ul class="cd-dropdown-content">
+                                        <li class="hidden-sm-up">
+                                            <a href="javascript:;">
+                                                <i class="icon-real-estate-043"></i>
+                                                <span>首頁</span>
+                                            </a>
+                                        </li>
+                                        <li class="cd-divider hidden-sm-up">商品分類</li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-hotel-restaurant-106"></i>
+                                                <span>美容</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">Menu</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                                <div class="clear-fix"></div>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-science-085"></i>
+                                                <span>彩妝</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">返回卸妝</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-medical-002"></i>
+                                                <span>生活保健</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">Menu</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                                <div class="clear-fix"></div>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">Clothing</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-medical-001"></i>
+                                                <span>醫藥品</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">返回卸妝</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="">
+                                                <i class="icon-science-134"></i>
+                                                <span>孕嬰用品</span>
+                                            </a>
+                                            <ul class="cd-secondary-dropdown is-hidden">
+                                                <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">卸妝</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">返回卸妝</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有卸妝分類</a></li>
+                                                        <li><a href="javascript:;">卸妝油</a></li>
+                                                        <li><a href="javascript:;">卸妝凝</a></li>
+                                                        <li><a href="javascript:;">卸妝霜</a></li>
+                                                        <li><a href="javascript:;">卸妝乳</a></li>
+                                                        <li><a href="javascript:;">卸妝棉</a></li>
+                                                        <li><a href="javascript:;">卸妝水</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="javascript:;">美髮/造型</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="javascript:;">回第一層</a></li>
+                                                        <li class="see-all"><a href="javascript:;">所有美髮/造型分類</a></li>
+                                                        <li><a href="javascript:;">免沖洗護髮</a></li>
+                                                        <li><a href="javascript:;">洗髮精</a></li>
+                                                        <li><a href="javascript:;">頭皮護理</a></li>
+                                                        <li><a href="javascript:;">頭髮造型</a></li>
+                                                        <li><a href="javascript:;">護髮</a></li>
+                                                        <li><a href="javascript:;">潤髮</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:;">所有商品分類頁面</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Main Nav End -->
+        </header>
+        <section class="koko-products bg--white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="product-images">
+                            <div class="owl-carousel owl-theme product-images-carousel" id="bg-product">
+                                <a href="img/img-product.svg" data-fancybox="images">
+                                    <img src="img/img-product.svg" class="product-img">
+                                </a>
+                                <a href="img/img-product.svg" data-fancybox="images">
+                                    <img src="img/img-product.svg" class="product-img">
+                                </a>
+                                <a href="img/img-product.svg" data-fancybox="images">
+                                    <img src="img/img-product.svg" class="product-img">
+                                </a>
+                                <a href="img/img-product.svg" data-fancybox="images">
+                                    <img src="img/img-product.svg" class="product-img">
+                                </a>
+                            </div>
+                            <div class="owl-carousel owl-theme product-images-carousel" id="sm-product">
+                                <a href="img/img-product.svg">
+                                    <img src="img/img-product.svg" class="product-img">
+                                </a>
+                                <a href="img/img-product.svg">
+                                    <img src="img/img-product.svg" class="product-img">
+                                </a>
+                                <a href="img/img-product.svg">
+                                    <img src="img/img-product.svg" class="product-img">
+                                </a>
+                                <a href="img/img-product.svg">
+                                    <img src="img/img-product.svg" class="product-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <div class="product-details">
+                            <h2>WAKAMOTO 若元錠 諾元若元錠 諾元 諾元若元錠 諾元</h2>
+                            <dl>
+                                <dt>產地</dt>
+                                <dd>
+                                    <img class="flag" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cmVjdCB5PSI4NS4zMzEiIHN0eWxlPSJmaWxsOiNGMEYwRjA7IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjM0MS4zMzciLz4KPGNpcmNsZSBzdHlsZT0iZmlsbDojRDgwMDI3OyIgY3g9IjI1NiIgY3k9IjI1NS45OTQiIHI9Ijk2Ii8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" alt="">
+                                    <font class="align-middle">日本</font>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>品牌</dt>
+                                <dd>WAKAMOTO</dd>
+                            </dl>
+                            <dl>
+                                <dt>製造商</dt>
+                                <dd>WAKAMOTO / 若元製藥</dd>
+                            </dl>
+                            <div class="product-price">
+                                <div class="product-price--sub">
+                                    <div class="original">
+                                        <font>定價：</font>
+                                        <font class="jp">2,700</font>
+                                        <font>日圓</font>
+                                    </div>
+                                    <div class="sell">
+                                        <font>售價 (免稅)：</font>
+                                        <font class="jp">1,648</font>
+                                        <font>日圓</font>
+                                    </div>
+                                    <div class="point">
+                                        <font>現正購買即可獲贈</font>
+                                        <strong>16</strong>
+                                        <font>點！</font>
+                                    </div>
+                                </div>
+                                <div class="special">
+                                    <font>特價：</font>
+                                    <strong class="jp">1,648</strong>
+                                    <font>日圓</font>
+                                </div>
+                            </div>
+                            <div class="price-toolstip-cnt">
+                                <a class="price-toolstip btn btn--dark--green btn--xs" href="javascript:;" data-tooltip="關於價格標示關於價格標示關於價格標示關於價格標示關於價格標示關於價格標示" data-flow="down">關於價格標示</a>
+                            </div>
+                            <dl>
+                                <dt>商品代碼</dt>
+                                <dd>4987243114014</dd>
+                            </dl>
+                            <dl>
+                                <dt>内容量</dt>
+                                <dd>
+                                    <select class="selectWhite" name="" multiple>
+                                        <option value="">1000錠</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>商品淨重</dt>
+                                <dd>555 g</dd>
+                            </dl>
+                            <dl>
+                                <dt>商品總重量</dt>
+                                <dd>555 g</dd>
+                            </dl>
+                            <dl>
+                                <dt>尺寸</dt>
+                                <dd>高度 15.9 cm × 長度7.6 cm × 寬度 7.6 cm</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="product-add-cart">
+                            <figure class="coupon--card mb-8">
+                                <figcaption class="inner">
+                                    <div class="pass">
+                                        <h1>滿額贈送折價卷</h1>
+                                    </div>
+                                    <span>COUPON</span>
+                                    <strong>2020</strong>
+                                </figcaption>
+                            </figure>
+                            <figure class="coupon--ticket mb-8">
+                                <span>Coupon</span>
+                            </figure>
+                            <img src="img/coupon.svg" alt="" style="width: 100%">
+                            <div class="product-add-cart-cnt">
+                                <a class="btn btn--border--tertiary btn--md btn--block mb-16" href="javascript:;">
+                                    <i class="fa fa-heart-o mr-16"></i>加 入 收 藏</a>
+                                <dl>
+                                    <dt>庫存</dt>
+                                    <dd>
+                                        <strong class="text--secondary text--16">有</strong>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>購買數量</dt>
+                                    <dd>
+                                        <div class="number-spinner">
+                                            <button class="btn btn--border--primary btn--square spinnyBtn" data-dir="dwn">－</button>
+                                            <input type="number" class="input--xs" value="1">
+                                            <button class="btn btn--border--primary btn--square spinnyBtn" data-dir="up">＋</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <p class="remark">※ 一次可購買的數量限制：<font>20</font>&nbsp;件</p>
+                                <a class="btn btn--primary btn--md btn--block mb-16" href="cart_1_check.html">立 即 購 買</a>
+                                <a class="btn btn--border--primary btn--md btn--block" href="javascript:;">加 入 購 物 車</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="koko-push-product bg--lightorange--1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>最新熱門推薦商品</h3>
+                    <p class="mt-8 mb-24">After using various platforms, I changed!</p>
+                </div>
+            </div>
+            <div class="owl-carousel" id="koko-push-product">
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="koko-description bg--white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="product-description">
+                            <div class="koko-title--5">
+                                <h4 class="">商品介紹</h4>
+                            </div>
+                            <div class="description-cnt">
+                                <p>美白+乳液+防曬+底妝+顏色校正和CC霜一個5角色</p>
+                                <br>
+                                <p>美白而強大的紫外線切斷。 CC霜導致透明的美麗肌膚。</p>
+                                <br>
+                                <p>SPF50 + PA ++++的三層夾層結構，以汗水和抗水，導致而UV截止的透明美麗的肌膚強於汗水和水，防水配方處方以為皮膚觸痛阻斷其1污點信息，美白活性成分“凝血酸”製劑。</p>
+                                <br>
+                                <p>第2部分保濕亮膚SokuOsamu角質層精成分※1配方接近質感同時保護皮膚在其3紫外線破壞感興趣的組分（BC複雜※2）＆PM2.5損壞感興趣的組分（Ougonekisu※3）共混，以清除美麗的皮膚。</p>
+                                <br>
+                                <p>其四強大的抗紫外線（SPF50 + PA ++++），出汗，強烈崩潰難以防水的配製。你可以在每個場景中使用。</p>
+                                <br>
+                                這一提法被認為是一個善良到5皮膚。 （低變應原性，無香料，過敏性測試※4）</p>
+                                <br>
+                                <p>美白：它抑制黑色素的產生，防止雀斑</p>
+                                <p>※1 保濕（硫酸海藻糖的Na，polymethacryloylacetones氧乙基磷酰膽鹼的溶液）</p>
+                                <p>※2 濕氣組分（按鈕提取物，提取物工機）</p>
+                                <p>※3 保濕</p>
+                                <p>※4 並不意味著對所有過敏不會發生。</p>
+                            </div>
+                            <div class="koko-title--5">
+                                <h4>使用方法</h4>
+                            </div>
+                            <div class="description-cnt">
+                                <p>1.你有鑲著洗劑的皮膚後，取適量於指尖，你把在額頭，臉頰，鼻子和下巴。</p>
+                                <p>2.隨著從內側向外側讓軟化整個臉部。</p>
+                                <p>3.部分進行具體覆蓋，和外套少量。</p>
+                                <p>（清晨，在每天照顧一個約60天）</p>
+                                <p>
+                                    <您的使用情況的措施>
+                                </p>
+                                <p>大珍珠粒1分鐘</p>
+                            </div>
+                            <div class="koko-title--5">
+                                <h4>用法、用量</h4>
+                            </div>
+                            <div class="description-cnt">
+                                請於飯後,依下列用量服用。
+                                [年齡 / 1次用量 / 每天服用次數]
+                                ‧成人(15歳以上) / 9錠 / 3次
+                                ・11歳以上 15歳未満 / 6錠 / 3次
+                                ・8歳以上 11歳未満 / 5錠 / 3次
+                                ・5歳以上 8歳未満 / 3錠 / 3次
+                                ‧未滿5歲請勿服用。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="koko-push-product bg--lightyellow">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>購買此商品的人也買…</h3>
+                    <p class="mt-8 mb-24">After using various platforms, I changed!</p>
+                </div>
+            </div>
+            <div class="owl-carousel" id="koko-ano-product">
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+                <figure class="koko-card">
+                    <div class="box-up">
+                        <div class="img-container">
+                            <img class="img owl-lazy" data-src="img/img-product.svg" alt="productnames">
+                            <div class="p-price">1,999</div>
+                        </div>
+                        <div class="info-inner">
+                            <p class="p-name">體育帶黑/黑85厘米</p>
+                            <p class="p-company text--ellipsis">Phiten</p>
+                        </div>
+                    </div>
+                    <figcaption class="box-down">
+                        <a class="cart-bg" href="javascript:;">
+                            <div class="cart-bg-inner">
+                                <span class="buy-btn">立即購買</span>
+                            </div>
+                        </a>
+                        <a class="cart-btn addToCart" href="javascript:;">
+                            <span class="add-to-cart">
+                                <i class="icon-basket"></i>
+                            </span>
+                        </a>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="koko-record bg--white">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>最近瀏覽過的商品</h3>
+                    <p class="mt-8 mb-24">After using various platforms, I changed!</p>
+                </div>
+            </div>
+            <div class="owl-carousel" id="koko-record-list">
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+                <a href="#!"><img class="img" src="img/img-product.svg" alt=""></a>
+            </div>
+        </section>
+        <footer class="koko-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <h2>
+                            <i class="icon-education-045"></i>
+                            <span>找商品</span>
+                        </h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="ft-list">
+                                    <li class="">
+                                        <a class="" href="javascript:;">分類搜尋</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="js/" href="javascript:;">製造商搜尋</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">最新熱門商品</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h2>
+                            <i class="icon-education-043"></i>
+                            <span>客戶服務中心</span>
+                        </h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="ft-list">
+                                    <li class="">
+                                        <a class="" href="javascript:;">使用導覽</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">常見問題</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">聯絡我們</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">未註冊會員訂單查詢</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h2>
+                            <i class="icon-real-estate-013"></i>
+                            <span>關於 KOKOKARA</span>
+                        </h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="ft-list">
+                                    <li class="">
+                                        <a class="" href="javascript:;">關於我們</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">服務條款</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">點數規範</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">折價卷使用條款</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="" href="javascript:;">個人資料保護方針</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <img src="img/img-logo-white.svg" alt="kokokara">
+                        <ul class="social-icons">
+                            <li>
+                                <a href="javascript:;" data-tooltip="微博">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="ft-txt-block">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                            <p class="copyright">2019 © Kokokara. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="payment-icons">
+                            <li>
+                                <a href="javascript:;" data-tooltip="Visa" class="block">
+                                    <i class="fa fa-cc-visa"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Paypal" class="block">
+                                    <i class="fa fa-cc-paypal"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Mastercard" class="block">
+                                    <i class="fa fa-cc-mastercard"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Discover" class="block">
+                                    <i class="fa fa-cc-discover"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-tooltip="Jcb" class="block">
+                                    <i class="fa fa-cc-jcb"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <button class="js-go-to go-to-top" href="#" data-type="fixed" data-position='{"bottom": 16,"right": 16}' data-offset-top="400" data-compensation="#header" data-show-effect="zoomIn">
+            <i class="icon-arrow-up"></i>
+        </button>
+    </main>
+    <!-- JQuery -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Scroll -->
+    <script src="vendor/ScrollToFixed-master/jquery-scrolltofixed.js"></script>
+    <!-- OwlCarousel -->
+    <script src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- Mega Menu -->
+    <script src="vendor/mega-dropdown-master/js/jquery.menu-aim.js"></script>
+    <script src="vendor/mega-dropdown-master/js/mega-dropdown.js"></script>
+    <!-- FancyBox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- Go Top -->
+    <script src="js/go-to-top.js"></script>
+    <!-- Main -->
+    <script src="js/main.min.js"></script>
+    <script>
+    $(function() {
+        kokoOwl.productSlick();
+        $(".category-2").click(function() {
+            kokokaraMain.toggle(this);
+        });
+    });
+    </script>
+</body>
+
+</html>

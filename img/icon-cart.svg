@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="icon-cart" transform="translate(-933 -55.5)">
+    <g id="_Background" data-name="◼️ Background" transform="translate(933 55.5)" fill="#fff" stroke="#e4e4e4" stroke-miterlimit="10" stroke-width="1" opacity="0">
+      <circle cx="24" cy="24" r="24" stroke="none"/>
+      <circle cx="24" cy="24" r="23.5" fill="none"/>
+    </g>
+    <path id="Path" d="M1.824,0A1.833,1.833,0,1,0,3.658,1.833,1.831,1.831,0,0,0,1.824,0Z" transform="translate(951.509 85)" fill="#999"/>
+    <path id="Path-2" data-name="Path" d="M0,0V1.833H1.833l3.3,6.958L3.9,11.037a1.772,1.772,0,0,0-.229.88A1.839,1.839,0,0,0,5.5,13.75h11V11.917H5.885a.227.227,0,0,1-.229-.229l.027-.11.825-1.494h6.829a1.825,1.825,0,0,0,1.6-.944L18.223,3.19a.9.9,0,0,0,.11-.44.919.919,0,0,0-.917-.917H3.859L3,0H0Z" transform="translate(947.833 70.333)" fill="#999"/>
+    <path id="Path-3" data-name="Path" d="M1.824,0A1.833,1.833,0,1,0,3.658,1.833,1.831,1.831,0,0,0,1.824,0Z" transform="translate(960.676 85)" fill="#999"/>
+  </g>
+</svg>
